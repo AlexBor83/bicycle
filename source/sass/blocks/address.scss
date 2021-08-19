@@ -1,0 +1,39 @@
+.address {
+  text-align: center;
+}
+
+.address__container {
+  @media (max-width: $desktop-width) {
+    max-width: 700px;
+  }
+
+}
+
+
+.address__title {
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.address__text {
+  font-style: normal;
+  font-size: 17px;
+  line-height: 31px;
+  opacity: 0.7;
+  width: 555px;
+  margin: 0 auto 42px;
+
+  @media (max-width: $desktop-width) {
+    width: 630px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 270px;
+    margin-bottom: 25px;
+  }
+}
+
+

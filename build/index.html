@@ -12,7 +12,7 @@
 <body>
   <div class="intro">
     <header class="header">
-      <nav class="header__nav">
+      <nav class="header__nav header__nav--closed">
         <ul class="header__list">
           <li class="header__item">
             <a class="header__link" href="#">
@@ -37,36 +37,37 @@
         </ul>
       </nav>
     </header>
+    <div class="intro__inner">
+      <section class="intro__content">
+        <a href="#" class="intro__logo">
+          <img src="img/logo.png" alt="Логотип магазина велосипедов" width="68" height="21">
+        </a>
+        <h1 class="intro__title">
+          Мы продаем велосипеды
+        </h1>
+        <p class="intro__text">
+          Наш магазин отбирает только самые лучшие велосипеды для продажи
+        </p>
+      </section>
 
-    <section class="intro__content">
-      <a href="#" class="intro__logo">
-        <img src="img/logo.png" alt="Логотип магазина велосипедов" width="68" height="21">
-      </a>
-      <h1 class="intro__title">
-        Мы продаем велосипеды
-      </h1>
-      <p class="intro__text">
-        Наш магазин отбирает только самые лучшие велосипеды для продажи
-      </p>
-    </section>
-
-     <div class="intro__form form">
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <h2 class="form__title">
-          Заполните поля ниже и мы подберем велосипед Вашей мечты
-        </h2>
-        <ul class="form__list">
-          <li class="form__item">
-            <input type="text" name="text" required="" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя">
-          </li>
-          <li class="form__item">
-            <input type="tel" name="tel" required="" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона">
-          </li>
-        </ul>
-        <button class="form__button" type="submit">
-          Подобрать велосипед мечты
-        </button>
-      </form>
+      <div class="intro__form form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <h2 class="form__title">
+            Заполните поля ниже и мы подберем велосипед Вашей мечты
+          </h2>
+          <ul class="form__list">
+            <li class="form__item">
+              <input type="text" name="text" required="" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя">
+            </li>
+            <li class="form__item">
+              <input type="tel" name="tel" required="" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона">
+            </li>
+          </ul>
+          <button class="form__button" type="submit">
+            Подобрать велосипед мечты
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -101,7 +102,7 @@
               Профессиональные консультации!
             </p>
           </li>
-        </ul>>
+        </ul>
       </div>
     </section>
 
@@ -112,8 +113,8 @@
         </h2>
 
         <ul class="bicycles__list">
-          <li class="bicycles__item">
-            <a class="bicycles__list" href="#">
+          <li class="bicycles__item bicycles__item--road">
+            <a class="bicycles__link" href="#">
               <picture>
                 <source media="(max-width: 767px)" type="image/webp" srcset="img/road_bike_mobile.webp">
                 <source media="(max-width: 1024px)" type="image/webp" srcset="img/road_bike_tablet.webp">
@@ -127,8 +128,8 @@
               </p>
             </a>
           </li>
-          <li class="bicycles__item">
-            <a class="bicycles__list" href="#">
+          <li class="bicycles__item bicycles__item--mountain">
+            <a class="bicycles__link" href="#">
               <picture>
                 <source media="(max-width: 767px)" type="image/webp" srcset="img/mountain_bike_mobile.webp">
                 <source media="(max-width: 1024px)" type="image/webp" srcset="img/mountain_bike_tablet.webp">
@@ -142,8 +143,8 @@
               </p>
             </a>
           </li>
-          <li class="bicycles__item">
-            <a class="bicycles__list" href="#">
+          <li class="bicycles__item bicycles__item--children">
+            <a class="bicycles__link" href="#">
               <picture>
                 <source media="(max-width: 767px)" type="image/webp" srcset="img/children_bicycle_mobile.webp">
                 <source media="(max-width: 1024px)" type="image/webp" srcset="img/children_bicycle_tablet.webp">
@@ -156,7 +157,7 @@
                 Детский велосипед
               </p>
             </a>
-          </li>
+          </li>.
         </ul>
       </div>
     </section>
@@ -184,16 +185,25 @@
     </section>
 
     <section class="address">
-      <h2 class="address__title main__title">
-        Как нас найти?
-      </h2>
-      <address class="address__text">
-        Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
-      </address>
+      <div class="container address__container">
+        <h2 class="address__title main__title">
+          Как нас найти?
+        </h2>
+        <address class="address__text">
+          Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
+        </address>
 
-      <div class="address__wrap">
-        <img src="img/map_desktop.png" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
-    </div>>
+        <div class="address__wrap">
+          <picture>
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/map_mobile.webp">
+            <source media="(max-width: 1024px)" type="image/webp" srcset="img/map_tablet.webp">
+            <source type="image/webp" srcset="img/map_desktop.webp">
+            <source media="(max-width: 767px)" srcset="img/map_mobile.png">
+            <source media="(max-width: 1024px)" srcset="img/map_tablet.png">
+            <img src="img/map_desktop.png" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
 

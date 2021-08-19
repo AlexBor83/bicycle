@@ -1,0 +1,88 @@
+.intro {
+  background-color: #131314;
+  background-image: url(../img/bike_header_desktop.webp);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  // Непойму как селать картинку резиновой, сделал но помоему чо то не то
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    background-image: url(../../img/bike_header_tablet.webp);
+    margin-bottom: 250px;
+
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url(../../img/bike_header_mobile.webp);
+  }
+}
+
+.intro__inner {
+  max-width: 880px;
+  margin: 0 auto 240px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    width: 767px;
+    margin: 25px auto 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 320px;
+  }
+}
+
+.intro__content {
+  position: relative;
+}
+
+.intro__title {
+  font-size: 46px;
+  line-height: 64px;
+  color: #ffffff;
+  margin: 10px 0 24px 0;
+  width: 400px;
+
+  @media (max-width: $desktop-width) {
+    margin: 0;
+    margin-top: 88px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.intro__text {
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  width: 385px;
+
+  @media (max-width: $desktop-width) {
+    width: 435px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 295px;
+    margin-bottom: 70px;
+  }
+}
+
+.intro__form {
+  margin-left: auto;
+}
+
+

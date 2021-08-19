@@ -1,0 +1,38 @@
+.header {
+  max-width: 874px;
+  margin: 21px auto 256px auto;
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  @media (max-width: $desktop-width) {
+    max-width: 767px;
+    margin: 0;
+    border: none;
+  }
+}
+
+.header__nav--closed {
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.header__link {
+  color: #ffffff;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+
+

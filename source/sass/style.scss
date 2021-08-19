@@ -1,6 +1,20 @@
-h1 {
-  color: red;
-}
 
 @import "normalize.scss";
 @import "viewports.scss";
+@import "global.scss";
+@import "blocks/fonts.scss";
+@import "blocks/body.scss";
+@import "blocks/container";
+@import "blocks/intro.scss";
+@import "blocks/header.scss";
+@import "blocks/form.scss";
+@import "blocks/main.scss";
+@import "blocks/features.scss";
+@import "blocks/bicycles";
+@import "blocks/video.scss";
+@import "blocks/address";
+@import "blocks/footer.scss";
+
+
+
+
