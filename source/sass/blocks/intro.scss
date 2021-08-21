@@ -9,6 +9,7 @@
   margin: 0 auto;
 
   @media (max-width: $desktop-width) {
+    position: relative;
     background-image: url(../../img/bike_header_tablet.webp);
     margin-bottom: 250px;
 
@@ -25,6 +26,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+  position: relative;
 
   @media (max-width: $desktop-width) {
     display: block;
@@ -38,7 +40,7 @@
 }
 
 .intro__content {
-  position: relative;
+
 }
 
 .intro__title {

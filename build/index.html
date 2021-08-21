@@ -12,29 +12,34 @@
 <body>
   <div class="intro">
     <header class="header">
-      <nav class="header__nav header__nav--closed">
+
+      <!-- <header__nav header__nav--closed header__nav--opened
+    header__nav--nojs"> -->
+
+      <nav class="header__nav header__nav--opened header__nav--nojs">
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="#features">
               О нас
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="#bicycles">
               Виды велосипедов
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="#video">
               Видео про велосипеды
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="#footer">
               Контакты
             </a>
           </li>
         </ul>
+        <button class="header__toggle" aria-label="Кнопка открытия меню"></button>
       </nav>
     </header>
     <div class="intro__inner">
@@ -49,7 +54,6 @@
           Наш магазин отбирает только самые лучшие велосипеды для продажи
         </p>
       </section>
-
       <div class="intro__form form">
         <form action="https://echo.htmlacademy.ru" method="POST">
           <h2 class="form__title">
@@ -72,7 +76,7 @@
   </div>
 
   <main class="main">
-    <section class="features">
+    <section class="features" id="features">
       <div class="features__container container">
         <h2 class="main__title features__title">
           Несколько фактов о нас
@@ -106,7 +110,7 @@
       </div>
     </section>
 
-    <section class="bicycles">
+    <section class="bicycles" id="bicycles">
       <div class="container bicycles__container">
         <h2 class="main__title bicycles__title">
           Виды велосипедов
@@ -161,7 +165,7 @@
         </ul>
       </div>
     </section>
-    <section class="video">
+    <section class="video" id="video">
       <h2 class="main__title video__title">
         Видео про велосипеды
       </h2>
@@ -207,7 +211,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <ul class="footer__list">
       <li class="footer__item">
         <a class="footer__link footer__link--mail" href="malito:puteshestviemechta@gmail.ru" aria-label="Почта компании">
@@ -220,10 +224,37 @@
           +7 (499) -784-684-46
         </a>
       </li>
-
-
     </ul>
   </footer>
+
+  <script>
+    const headerNav = document.querySelector('.header__nav');
+    const headerToggle = document.querySelector('.header__toggle');
+    const body = document.querySelector('body')
+    const headerLinks = document.querySelectorAll('.header__link')
+    headerNav.classList.remove('header__nav--nojs')
+
+    headerToggle.addEventListener('click', () =>{
+      if (headerNav.classList.contains('header__nav--closed')) {
+      headerNav.classList.remove('header__nav--closed');
+      headerNav.classList.add('header__nav--opened');
+      body.classList.add('fixed-page')
+      } else {
+        headerNav.classList.remove('header__nav--opened');
+        body.classList.remove('fixed-page')
+        headerNav.classList.add('header__nav--closed')
+      }
+    } )
+
+    headerLinks.forEach(item => {
+      item.addEventListener('click', () =>{
+        headerNav.classList.remove('header__nav--opened');
+        body.classList.remove('fixed-page');
+        headerNav.classList.add('header__nav--closed');
+      })
+    })
+
+  </script>
 
 
 </body>
