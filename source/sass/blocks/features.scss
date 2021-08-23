@@ -4,20 +4,20 @@
   margin-bottom: 148px;
 
   @media (max-width: $desktop-width) {
-    margin-bottom: 108px;
+    margin-top: 163px;
+    margin-bottom: 23px;
   }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 50px;
+    margin-top: 179px;
   }
-
-
 }
 
 .features__title {
   margin-bottom: 50px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 30px;
   }
 }
@@ -49,7 +49,7 @@
 
   @media (max-width: $tablet-width) {
     flex-basis: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
   }
 }
 
@@ -67,7 +67,6 @@
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 34px;
+    margin-top: 15px;
   }
-
-
 }

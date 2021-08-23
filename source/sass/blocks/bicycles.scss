@@ -6,7 +6,12 @@
 
   @media (max-width: $desktop-width) {
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 72px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 47px;
+    padding-bottom: 61px;
   }
 }
 
@@ -24,12 +29,15 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  padding: 0;
 
   @media (max-width: $desktop-width) {
-    padding: 0;
     justify-content: space-between;
   }
 
+  @media (max-width: $tablet-width) {
+    padding-left: 10px;
+  }
 }
 
 .bicycles__item {
@@ -45,6 +53,7 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 40px;
+
   }
 
   &::before {
@@ -129,15 +138,12 @@
       top: -22px;
       right: -22px;
     }
-
   }
-
-
 }
 
 .bicycles__name {
   color: #000000;
   font-weight: 600;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 11px;
 }

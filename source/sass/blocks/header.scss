@@ -1,6 +1,6 @@
 .header {
   max-width: 874px;
-  margin: 21px auto 256px auto;
+  margin: 21px auto 251px auto;
   padding-bottom: 9px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -23,7 +23,7 @@
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0;
 
   @media (max-width: $desktop-width) {
