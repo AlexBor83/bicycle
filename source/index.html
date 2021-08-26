@@ -7,6 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>bicycles</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
 </head>
 
 <body>
@@ -41,7 +45,24 @@
     <div class="intro__inner">
       <section class="intro__content">
         <a href="#" class="intro__logo">
-          <img src="img/logo.png" alt="Логотип магазина велосипедов" width="68" height="21">
+          <svg width="68" height="21" viewBox="0 0 68 21" fill="none" aria-label="Логотип магазина велосипедов">
+            <path
+              d="M13.3636 0V20.0455H10.0705V5.82273L8.97273 7.20682L6.825 9.975L6.72954 10.0705L6.58636 9.975L4.43864 7.20682L3.34091 5.775V20.0455H0V0H3.34091L6.72954 4.29545L10.0705 0H13.3636Z"
+              fill="#0AD9C6" />
+            <path d="M8.30444 10.0704L8.20898 9.97498L8.30444 10.0704Z" fill="#0AD9C6" />
+            <path d="M8.44787 9.97498L8.35241 10.0704H8.30469L8.44787 9.97498Z" fill="#0AD9C6" />
+            <path d="M38.2092 5.61453L29.0823 12.316L31.1955 15.194L40.3224 8.49252L38.2092 5.61453Z" fill="#0AD9C6" />
+            <path
+              d="M26.6674 3C22.8035 3 19.6243 6.13028 19.6243 10.0431C19.6243 13.9071 22.7546 17.0863 26.6674 17.0863C30.5313 17.0863 33.7105 13.956 33.7105 10.0431C33.7105 6.17919 30.5313 3 26.6674 3ZM26.6674 13.2712C24.8577 13.2712 23.4393 11.8039 23.4393 10.0431C23.4393 8.23344 24.9066 6.81503 26.6674 6.81503C28.4282 6.81503 29.8955 8.28235 29.8955 10.0431C29.8955 11.8039 28.4282 13.2712 26.6674 13.2712Z"
+              fill="#0AD9C6" />
+            <path
+              d="M43.6396 3C39.7756 3 36.5964 6.13028 36.5964 10.0431C36.5964 13.9071 39.7267 17.0863 43.6396 17.0863C47.5035 17.0863 50.6827 13.956 50.6827 10.0431C50.6338 6.17919 47.5035 3 43.6396 3ZM43.6396 13.2712C41.8299 13.2712 40.4115 11.8039 40.4115 10.0431C40.4115 8.23344 41.8788 6.81503 43.6396 6.81503C45.4004 6.81503 46.8677 8.28235 46.8677 10.0431C46.8677 11.8039 45.4004 13.2712 43.6396 13.2712Z"
+              fill="#0AD9C6" />
+            <path
+              d="M67.5977 0.238647V20.2841H64.2568V9.87956L61.4409 7.20683L59.3409 5.15456V20.2841H56V0.238647H59.2932H59.3409L63.2545 4.0091L64.2568 4.96365V0.238647H67.5977Z"
+              fill="#0AD9C6" />
+            <rect x="37" y="3" width="6" height="4" fill="#0AD9C6" />
+          </svg>
         </a>
         <h1 class="intro__title">
           Мы продаем велосипеды
@@ -112,17 +133,21 @@
         <h2 class="main__title bicycles__title">
           Виды велосипедов
         </h2>
-
         <ul class="bicycles__list">
           <li class="bicycles__item bicycles__item--road">
             <a class="bicycles__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" type="image/webp" srcset="img/road_bike_mobile.webp">
-                <source media="(max-width: 1024px)" type="image/webp" srcset="img/road_bike_tablet.webp">
-                <source type="image/webp" srcset="img/road_bike_desktop.webp">
-                <source media="(max-width: 767px)" srcset="img/road_bike_mobile.jpg">
-                <source media="(max-width: 1024px)" srcset="img/road_bike_tablet.jpg">
-                <img src="img/road_bike_desktop.jpg" alt="Фотография дорожного велоспеда" width="342" height="503">
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/road_bike_mobile.webp, img/road_bike_mobile@2x.webp 2x">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="img/road_bike_tablet.webp, img/road_bike_tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/road_bike_desktop.webp, img/road_bike_desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/road_bike_tablet.jpg, img/road_bike_tablet@2x.jpg 2x">
+                <source media="(max-width: 1024px)" srcset="img/road_bike_tablet.jpg, img/road_bike_tablet@2x.jpg 2x">
+
+                <!-- 1х: 342px; 2x: 684px -->
+                <img src="img/road_bike_desktop.jpg" srcset="img/road_bike_desktop@2x.jpg 2x"
+                  alt="Фотография дорожного велоспеда" width="342" height="503">
               </picture>
               <p class="bicycles__name">
                 Дорожный велосипед
@@ -132,12 +157,19 @@
           <li class="bicycles__item bicycles__item--mountain">
             <a class="bicycles__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" type="image/webp" srcset="img/mountain_bike_mobile.webp">
-                <source media="(max-width: 1024px)" type="image/webp" srcset="img/mountain_bike_tablet.webp">
-                <source type="image/webp" srcset="img/mountain_bike_desktop.webp">
-                <source media="(max-width: 767px)" srcset="img/mountain_bike_mobile.jpg">
-                <source media="(max-width: 1024px)" srcset="img/mountain_bike_tablet.jpg">
-                <img src="img/mountain_bike_desktop.jpg" alt="Фотография дорожного велоспеда" width="342" height="566">
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/mountain_bike_mobile.webp, img/mountain_bike_mobile@2x.webp 2x">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="img/mountain_bike_tablet.webp, img/mountain_bike_tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/mountain_bike_desktop.webp, img/mountain_bike_desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/mountain_bike_mobile.jpg, img/mountain_bike_mobile@2x.jpg 2x">
+                <source media="(max-width: 1024px)"
+                  srcset="img/mountain_bike_tablet.jpg, img/mountain_bike_tablet@2x.jpg 2x">
+
+                <!-- 1х: 342px; 2x: 684px -->
+                <img src="img/mountain_bike_desktop.jpg" srcset="img/mountain_bike_desktop@2x.jpg 2x"
+                  alt="Фотография дорожного велоспеда" width="342" height="566">
               </picture>
               <p class="bicycles__name">
                 Горный велосипед
@@ -147,13 +179,20 @@
           <li class="bicycles__item bicycles__item--children">
             <a class="bicycles__link" href="#">
               <picture>
-                <source media="(max-width: 767px)" type="image/webp" srcset="img/children_bicycle_mobile.webp">
-                <source media="(max-width: 1024px)" type="image/webp" srcset="img/children_bicycle_tablet.webp">
-                <source type="image/webp" srcset="img/children_bicycle_desktop.webp">
-                <source media="(max-width: 767px)" srcset="img/children_bicycle_mobile.jpg">
-                <source media="(max-width: 1024px)" srcset="img/children_bicycle_tablet.jpg">
-                <img src="img/children_bicycle_desktop.jpg" alt="Фотография детского велоспеда" width="342"
-                  height="513">
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/children_bicycle_mobile.webp, img/children_bicycle_mobile@2x.webp 2x">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="img/children_bicycle_tablet.webp, img/children_bicycle_tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/children_bicycle_desktop.webp, img/children_bicycle_desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/children_bicycle_mobile.jpg, img/children_bicycle_mobile@2x.jpg 2x">
+                <source media="(max-width: 1024px)"
+                  srcset="img/children_bicycle_tablet.jpg, img/children_bicycle_tablet@2x.jpg 2x">
+
+                <!-- 1х: 342px; 2x: 684px -->
+                <img src="img/children_bicycle_desktop.jpg" srcset="img/children_bicycle_desktop@2x.jpg 2x"
+                  alt="Фотография детского велоспеда" width="342" height="513">
               </picture>
               <p class="bicycles__name">
                 Детский велосипед
@@ -163,6 +202,7 @@
         </ul>
       </div>
     </section>
+
     <section class="video" id="video">
       <h2 class="main__title video__title">
         Видео про велосипеды
@@ -170,18 +210,20 @@
       <p class="video__text">
         В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.
       </p>
-
       <div class="video__inner">
-
         <picture>
-          <source media="(max-width: 767px)" type="image/webp" srcset="img/bike_video_mobile.webp">
-          <source media="(max-width: 1024px)" type="image/webp" srcset="img/bike_video_tablet.webp">
-          <source type="image/webp" srcset="img/bike_video_desktop.webp">
-          <source media="(max-width: 767px)" srcset="img/bike_video_mobile.jpg">
-          <source media="(max-width: 1024px)" srcset="img/bike_video_tablet.jpg">
-          <img src="img/bike_video_desktop.jpg" alt="Видео про велоспеды" width="929" height="522">
-        </picture>
+          <source media="(max-width: 767px)" type="image/webp"
+            srcset="img/bike_video_mobile.webp, img/bike_video_mobile@2x.webp 2x">
+          <source media="(max-width: 1024px)" type="image/webp"
+            srcset="img/bike_video_tablet.webp, img/bike_video_tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bike_video_desktop.webp, img/bike_video_desktop@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/bike_video_mobile.jpg, img/bike_video_mobile@2x.jpg 2x">
+          <source media="(max-width: 1024px)" srcset="img/bike_video_tablet.jpg, img/bike_video_tablet@2x.jpg 2x">
 
+          <!-- 1х: 929px; 2x: 1858px -->
+          <img src="img/bike_video_desktop.jpg" srcset="img/bike_video_desktop@2x.jpg 2x" alt="Видео про велоспеды"
+            width="929" height="522">
+        </picture>
         <button class="video__play-button" type="button"></button>
       </div>
     </section>
@@ -194,16 +236,19 @@
         <address class="address__text">
           Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
         </address>
-
         <div class="address__wrap">
           <picture>
-            <source media="(max-width: 767px)" type="image/webp" srcset="img/map_mobile.webp">
-            <source media="(max-width: 1024px)" type="image/webp" srcset="img/map_tablet.webp">
-            <source type="image/webp" srcset="img/map_desktop.webp">
-            <source media="(max-width: 767px)" srcset="img/map_mobile.png">
-            <source media="(max-width: 1024px)" srcset="img/map_tablet.png">
-            <img src="img/map_desktop.png" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957"
-              height="530">
+            <source media="(max-width: 767px)" type="image/webp"
+              srcset="img/map_mobile.webp, img/map_mobile@2x.webp 2x">
+            <source media="(max-width: 1024px)" type="image/webp"
+              srcset="img/map_tablet.webp, img/map_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map_desktop.webp, img/map_desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/map_mobile.png, img/map_mobile@2x.png 2x">
+            <source media="(max-width: 1024px)" srcset="img/map_tablet.png, img/map_tablet@2x.png 2x">
+
+            <!-- 1х: 957px; 2x: 1914px -->
+            <img src="img/map_desktop.png" srcset="img/map_desktop@2x.png 2x"
+              alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
           </picture>
         </div>
       </div>
@@ -215,12 +260,17 @@
       <li class="footer__item">
         <a class="footer__link footer__link--mail" href="mailto:puteshestviemechta@gmail.ru"
           aria-label="Почта компании">
+          <svg width="26" height="20" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon_mail"></use>
+          </svg>
           puteshestviemechta@gmail.ru
         </a>
       </li>
-
       <li class="footer__item">
         <a class="footer__link footer__link--tel" href="tel:+749978468446" aria-label="Телефон компании">
+          <svg width="20" height="25" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon_tel"></use>
+          </svg>
           +7 (499) -784-684-46
         </a>
       </li>
@@ -228,7 +278,6 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/validate.js"></script>
 
 </body>
 

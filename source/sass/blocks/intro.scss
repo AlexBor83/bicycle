@@ -1,21 +1,32 @@
 .intro {
   background-color: #131314;
-  background-image: url(../img/bike_header_desktop.webp);
+  background-image: url(../img/bike_header_desktop.jpg);
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  // Непойму как селать картинку резиновой, сделал но помоему чо то не то
   width: 100%;
   margin: 0 auto;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bike_header_desktop@2x.jpg");
+  }
+
   @media (max-width: $desktop-width) {
     position: relative;
-    background-image: url(../../img/bike_header_tablet.webp);
+    background-image: url(../img/bike_header_tablet.jpg);
     margin-bottom: 250px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike_header_tablet@2x.jpg");
+    }
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url(../../img/bike_header_mobile.webp);
+    background-image: url(../img/bike_header_mobile.webp);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bike_header_mobile@2x.jpg");
+    }
   }
 }
 
@@ -39,6 +50,15 @@
 }
 
 .intro__logo {
+
+  &:focus,
+  &:hover {
+    svg path,
+    svg rect {
+      fill: red;
+    }
+  }
+
   @media (max-width: $desktop-width) {
     display: block;
     margin-left: 20px;
