@@ -19,7 +19,7 @@
   margin: 10px 0 0;
 
   @media (max-width: $desktop-width) {
-    color: #000;
+    color: #000000;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.5px;
@@ -44,6 +44,8 @@
   margin-bottom: 20px;
   border: 1px solid #c9ccd4;
   border-radius: 6px;
+  font-size: 15px;
+  line-height: 24px;
 
   &::placeholder {
     font-size: 15px;
@@ -66,5 +68,5 @@
 }
 
 .form__error {
-  box-shadow: 0 0 5px red;
+  box-shadow: 0 0 5px #f30404;
 }

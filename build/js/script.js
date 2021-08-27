@@ -1,71 +1,63 @@
-"use strict";
+'use strict';
 
-//Мобильное меню
-const headerNav = document.querySelector(".header__nav");
-const headerToggle = document.querySelector(".header__toggle");
-const body = document.querySelector("body");
-const headerLinks = document.querySelectorAll(".header__link");
-headerNav.classList.remove("header__nav--nojs");
+// Мобильное меню
+var headerNav = document.querySelector('.header__nav');
+var headerToggle = document.querySelector('.header__toggle');
+var body = document.querySelector('body');
+var headerLinks = document.querySelectorAll('.header__link');
+headerNav.classList.remove('header__nav--nojs');
 
-headerToggle.addEventListener("click", () => {
-  if (headerNav.classList.contains("header__nav--closed")) {
-    headerNav.classList.remove("header__nav--closed");
-    headerNav.classList.add("header__nav--opened");
-    body.classList.add("fixed-page");
+headerToggle.addEventListener('click', function () {
+  if (headerNav.classList.contains('header__nav--closed')) {
+    headerNav.classList.remove('header__nav--closed');
+    headerNav.classList.add('header__nav--opened');
+    body.classList.add('fixed-page');
   } else {
-    headerNav.classList.remove("header__nav--opened");
-    body.classList.remove("fixed-page");
-    headerNav.classList.add("header__nav--closed");
+    headerNav.classList.remove('header__nav--opened');
+    body.classList.remove('fixed-page');
+    headerNav.classList.add('header__nav--closed');
   }
 });
 
-headerLinks.forEach((item) => {
-  item.addEventListener("click", () => {
-    headerNav.classList.remove("header__nav--opened");
-    body.classList.remove("fixed-page");
-    headerNav.classList.add("header__nav--closed");
+headerLinks.forEach(function (item) {
+  item.addEventListener('click', function () {
+    headerNav.classList.remove('header__nav--opened');
+    body.classList.remove('fixed-page');
+    headerNav.classList.add('header__nav--closed');
   });
 });
 
-
-//Валидация формы
-const form = document.querySelector("form");
-const inputs = form.querySelectorAll("input");
-const inputTel = form.querySelector("input[name=tel]");
-const formButton = form.querySelector(".form__button");
-console.log(inputs[1]);
+// Валидация формы
+var form = document.querySelector('form');
+var inputs = form.querySelectorAll('input');
+var inputTel = form.querySelector('input[name=tel]');
 
 form.noValidate = true;
 
 // запрет на ввод всего кроме цифр в поле с телефоном
 
-inputTel.addEventListener("input", ({ target }) => {
-  target.value = target.value.replace(/[^\d]/g, "");
+inputTel.addEventListener('input', function (target) {
+  target.value = target.value.replace(/[^()+-\d]/g, '');
 });
 
 // Отправка формы
 
-form.addEventListener("submit", (evt) => {
+form.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
-  console.log("Форма отправлена");
-
-  let error = formValidate(form);
+  var error = formValidate();
 
   if (error === 0) {
     // Нужно доделать отправку формы на сервер
-    alert("Форма отправилась");
-  } else {
-    alert("Заполите обязательные поля");
   }
 });
 
-function formValidate(form) {
-  let error = 0;
+function formValidate() {
+  var error = 0;
 
-  inputs.forEach((input) => {
+  inputs.forEach(function (input) {
     formRemoveError(input);
-    if (input.value === "") {
+    if (input.value === '') {
       formAddError(input);
       error++;
     }
@@ -75,9 +67,9 @@ function formValidate(form) {
 }
 
 function formAddError(input) {
-  input.classList.add("form__error");
+  input.classList.add('form__error');
 }
 
 function formRemoveError(input) {
-  input.classList.remove("form__error");
+  input.classList.remove('form__error');
 }
