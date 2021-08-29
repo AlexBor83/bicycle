@@ -16,25 +16,25 @@
 <body>
   <div class="intro">
     <header class="header">
-      <nav class="header__nav header__nav--opened header__nav--nojs">
+      <nav class="header__nav header__nav--closed header__nav--nojs">
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#features">
+            <a class="header__link js-trigger-link" href="#features">
               О нас
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#bicycles">
+            <a class="header__link js-trigger-link" href="#bicycles">
               Виды велосипедов
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#video">
+            <a class="header__link js-trigger-link" href="#video">
               Видео про велосипеды
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#footer">
+            <a class="header__link js-trigger-link" href="#footer">
               Контакты
             </a>
           </li>
@@ -121,6 +121,7 @@
         <ul class="bicycles__list">
           <li class="bicycles__item bicycles__item--road">
             <a class="bicycles__link" href="#">
+              <div class="bicycles__wrap">
               <picture>
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="img/road_bike_mobile.webp, img/road_bike_mobile@2x.webp 2x">
@@ -134,6 +135,7 @@
                 <img src="img/road_bike_desktop.jpg" srcset="img/road_bike_desktop@2x.jpg 2x"
                   alt="Фотография дорожного велоспеда" width="342" height="503">
               </picture>
+              </div>
               <p class="bicycles__name">
                 Дорожный велосипед
               </p>
@@ -141,6 +143,7 @@
           </li>
           <li class="bicycles__item bicycles__item--mountain">
             <a class="bicycles__link" href="#">
+              <div class="bicycles__wrap">
               <picture>
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="img/mountain_bike_mobile.webp, img/mountain_bike_mobile@2x.webp 2x">
@@ -156,6 +159,7 @@
                 <img src="img/mountain_bike_desktop.jpg" srcset="img/mountain_bike_desktop@2x.jpg 2x"
                   alt="Фотография дорожного велоспеда" width="342" height="566">
               </picture>
+              </div>
               <p class="bicycles__name">
                 Горный велосипед
               </p>
@@ -163,6 +167,7 @@
           </li>
           <li class="bicycles__item bicycles__item--children">
             <a class="bicycles__link" href="#">
+              <div class="bicycles__wrap">
               <picture>
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="img/children_bicycle_mobile.webp, img/children_bicycle_mobile@2x.webp 2x">
@@ -179,6 +184,7 @@
                 <img src="img/children_bicycle_desktop.jpg" srcset="img/children_bicycle_desktop@2x.jpg 2x"
                   alt="Фотография детского велоспеда" width="342" height="513">
               </picture>
+              </div>
               <p class="bicycles__name">
                 Детский велосипед
               </p>
@@ -262,6 +268,7 @@
     </ul>
   </footer>
 
+  <script src="js/vendor.js"></script>
   <script src="js/script.js"></script>
 
 </body>

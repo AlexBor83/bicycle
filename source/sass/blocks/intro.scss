@@ -1,7 +1,7 @@
 .intro {
-  background-color: #131314;
+  background-color: $greydarkvery;
   background-image: url("../img/bike_header_desktop.jpg");
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -60,7 +60,7 @@
 .intro__title {
   font-size: 46px;
   line-height: 64px;
-  color: #ffffff;
+  color: $wight;
   margin: 23px 0 24px 0;
   width: 400px;
 
@@ -78,7 +78,7 @@
 }
 
 .intro__text {
-  color: #ffffff;
+  color: $wight;
   opacity: 0.8;
   margin: 0;
   font-weight: 300;

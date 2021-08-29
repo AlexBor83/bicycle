@@ -1,7 +1,6 @@
 .features {
   text-align: center;
-  margin-top: 150px;
-  margin-bottom: 148px;
+  margin: 150px auto 148px auto;
 
   @media (max-width: $desktop-width) {
     margin-top: 163px;
@@ -24,21 +23,24 @@
 
 .features__list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 
   @media (max-width: $desktop-width) {
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 35px;
   }
 }
 
 .features__item {
-  width: 263px;
-  margin-right: 38px;
-
   @media (max-width: $desktop-width) {
     flex-basis: 50%;
     margin-right: 0;
@@ -52,7 +54,7 @@
 }
 
 .features__number {
-  color: #0ad9c6;
+  color: $green;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;

@@ -5,71 +5,104 @@ var headerNav = document.querySelector('.header__nav');
 var headerToggle = document.querySelector('.header__toggle');
 var body = document.querySelector('body');
 var headerLinks = document.querySelectorAll('.header__link');
-headerNav.classList.remove('header__nav--nojs');
 
-headerToggle.addEventListener('click', function () {
-  if (headerNav.classList.contains('header__nav--closed')) {
-    headerNav.classList.remove('header__nav--closed');
-    headerNav.classList.add('header__nav--opened');
-    body.classList.add('fixed-page');
-  } else {
-    headerNav.classList.remove('header__nav--opened');
-    body.classList.remove('fixed-page');
-    headerNav.classList.add('header__nav--closed');
+var closeNav = function () {
+  headerNav.classList.remove('header__nav--opened');
+  body.classList.remove('fixed-page');
+  headerNav.classList.add('header__nav--closed');
+};
+
+var openNav = function () {
+  headerNav.classList.remove('header__nav--closed');
+  headerNav.classList.add('header__nav--opened');
+  body.classList.add('fixed-page');
+};
+
+var menuController = function () {
+  if (!headerNav) {
+    return;
   }
-});
 
-headerLinks.forEach(function (item) {
-  item.addEventListener('click', function () {
-    headerNav.classList.remove('header__nav--opened');
-    body.classList.remove('fixed-page');
-    headerNav.classList.add('header__nav--closed');
+  headerNav.classList.remove('header__nav--nojs');
+
+  headerToggle.addEventListener('click', function () {
+    if (headerNav.classList.contains('header__nav--closed')) {
+      openNav();
+      return;
+    }
+    closeNav();
   });
-});
+
+  headerLinks.forEach(function (item) {
+    item.addEventListener('click', function () {
+      closeNav();
+    });
+  });
+};
 
 // Валидация формы
 var form = document.querySelector('form');
-var inputs = form.querySelectorAll('input');
-var inputTel = form.querySelector('input[name=tel]');
 
-form.noValidate = true;
-
-// запрет на ввод всего кроме цифр в поле с телефоном
-
-inputTel.addEventListener('input', function (target) {
-  target.value = target.value.replace(/[^()+-\d]/g, '');
-});
-
-// Отправка формы
-
-form.addEventListener('submit', function (evt) {
-  evt.preventDefault();
-
-  var error = formValidate();
-
-  if (error === 0) {
-    // Нужно доделать отправку формы на сервер
+var initFormValidate = function () {
+  if (!form) {
+    return;
   }
-});
 
-function formValidate() {
-  var error = 0;
+  var inputs = form.querySelectorAll('input');
+  var inputTel = form.querySelector('input[name=tel]');
 
-  inputs.forEach(function (input) {
-    formRemoveError(input);
-    if (input.value === '') {
-      formAddError(input);
-      error++;
+  form.noValidate = true;
+
+  // запрет на ввод всего кроме цифр в поле с телефоном
+
+  inputTel.addEventListener('input', function (evt) {
+    evt.target.value = evt.target.value.replace(/[^()+-\d]/g, '');
+  });
+
+  // Отправка формы
+
+  form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    if (formValidate()) {
+      setTimeout(function () {
+        evt.target.reset();
+      }, 500);
     }
   });
 
-  return error;
-}
+  function formValidate() {
+    var flag = true;
+    inputs.forEach(function (input) {
+      input.classList.remove('form__error');
+      if (!input.value) {
+        input.classList.add('form__error');
+        flag = false;
+      }
+    });
+    return flag;
+  }
+};
 
-function formAddError(input) {
-  input.classList.add('form__error');
-}
+initFormValidate();
+menuController();
 
-function formRemoveError(input) {
-  input.classList.remove('form__error');
-}
+// Плавный скрол
+
+var move = new window.MoveTo({
+  duration: 1000,
+  easing: 'easeOutQuart',
+});
+
+var initInnerLinks = function () {
+
+  var triggers = document.querySelectorAll('.js-trigger-link');
+
+  if (triggers.length) {
+    triggers.forEach(function (trigger) {
+      move.registerTrigger(trigger);
+      document.activeElement.blur();
+    });
+  }
+};
+
+initInnerLinks();
