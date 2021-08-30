@@ -1,15 +1,17 @@
 .features {
   text-align: center;
-  margin: 150px auto 148px auto;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 148px;
 
   @media (max-width: $desktop-width) {
-    margin-top: 163px;
-    margin-bottom: 23px;
+    padding-top: 163px;
+    padding-bottom: 23px;
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 50px;
-    margin-top: 179px;
+    padding-bottom: 50px;
+    padding-top: 179px;
   }
 }
 

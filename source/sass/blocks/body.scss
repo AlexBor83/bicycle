@@ -1,5 +1,5 @@
 body {
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: $font-family--OpenSans;
   color: $black;
   font-weight: 400;
   font-size: 22px;
@@ -9,4 +9,5 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  overflow-x: hidden;
 }

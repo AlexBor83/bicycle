@@ -6,6 +6,7 @@ $mobile-width-only: 767px;
 //colors
 
 $black: #000000;
+$black-opopacity-05: rgba(0, 0, 0, 0.5);
 $blacklight: #1c1c1c;
 $blacklightvery: rgba(255, 255, 255, 0.2);
 $wight: #ffffff;
@@ -14,3 +15,11 @@ $greydark: #c9ccd4;
 $greydarkvery: #131314;
 $green: #0ad9c6;
 $red: #f30404;
+
+//fonts
+
+$font-family--OpenSans: "OpenSans", "Arial", sans-serif;
+
+//rtina
+
+$retina-dpi-2: 2dppx;
