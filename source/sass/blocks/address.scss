@@ -5,6 +5,8 @@
 .address__container {
   @media (max-width: $desktop-width) {
     max-width: 700px;
+    padding: 0;
+    padding-bottom: 10px;
   }
 
   @media (max-width: $tablet-width) {
@@ -24,6 +26,8 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 

@@ -31,17 +31,19 @@
 }
 
 .intro__inner {
-  max-width: 895px;
-  margin: 0 auto 240px auto;
+  max-width: 910px;
+  margin: 0 auto 238px auto;
   display: flex;
   justify-content: space-between;
   padding: 0;
   position: relative;
+  padding-left: 14px;
 
   @media (max-width: $desktop-width) {
     display: block;
     width: 767px;
     margin: 4px auto 0;
+    padding: 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -52,7 +54,7 @@
 .intro__logo {
   @media (max-width: $desktop-width) {
     display: block;
-    margin-left: 20px;
+    margin-left: 21px;
     margin-top: 12px;
   }
 }
@@ -106,7 +108,7 @@
   @media (max-width: $desktop-width) {
     position: absolute;
     left: 50%;
-    top: 160%;
+    top: 158%;
     transform: translateX(-50%);
   }
 

@@ -6,16 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>bicycles</title>
+  <link rel="preload" href="/fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/OpenSans-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/img/bike_header_desktop@2x.jpg" as="image">
+  <link rel="preload" href="/img/bike_header_mobile@2x.jpg" as="image">
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font">
-  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font">
-  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
 </head>
 
 <body>
   <div class="intro">
     <header class="header">
+      <!-- Классы для управления меню header__nav--nojs - меню при отключенном js
+      header__nav--opened - открыть меню, header__nav--closed - закрыть меню -->
       <nav class="header__nav header__nav--closed header__nav--nojs">
         <ul class="header__list">
           <li class="header__item">

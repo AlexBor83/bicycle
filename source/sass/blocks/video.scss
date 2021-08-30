@@ -2,17 +2,18 @@
   background-color: $blacklight;
   color: $wight;
   text-align: center;
-  padding: 120px 0 522px 0;
+  padding: 120px 0 460px 0;
   margin-bottom: 248px;
   position: relative;
 
   @media (max-width: $desktop-width) {
-    padding: 64px 0 282px 0;
+    padding: 64px 0 217px 0;
     margin-bottom: 150px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 79px 0 162px 0;
+    padding: 79px 0 144px 0;
+    margin-bottom: 120px;
   }
 }
 
@@ -72,8 +73,8 @@
   outline: none;
   cursor: pointer;
   left: 50%;
-  top: 40%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   &:hover,
   &:focus {
