@@ -54,7 +54,7 @@
 
   &:nth-child(3n + 2) {
     margin-top: 32px;
-    justify-self:center;
+    justify-self: center;
 
     @media (max-width: $desktop-width) {
       margin-top: 0;
