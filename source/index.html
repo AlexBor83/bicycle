@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>bicycles</title>
-  <link rel="preload" href="/fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/OpenSans-Light.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/img/bike_header_desktop@2x.jpg" as="image">
-  <link rel="preload" href="/img/bike_header_mobile@2x.jpg" as="image">
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -48,7 +46,7 @@
     </header>
     <div class="intro__inner">
       <section class="intro__content">
-        <a href="#" class="intro__logo" aria-label="Логотип магазина Moon">
+        <a class="intro__logo" aria-label="Логотип магазина Moon">
           <svg width="68" height="21" aria-hidden="true">
             <use xlink:href="img/sprite_auto.svg#icon_logo"></use>
           </svg>
@@ -126,19 +124,19 @@
           <li class="bicycles__item">
             <a class="bicycles__link" href="#">
               <div class="bicycles__wrap">
-              <picture>
-                <source media="(max-width: 767px)" type="image/webp"
-                  srcset="img/road_bike_mobile.webp, img/road_bike_mobile@2x.webp 2x">
-                <source media="(max-width: 1024px)" type="image/webp"
-                  srcset="img/road_bike_tablet.webp, img/road_bike_tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/road_bike_desktop.webp, img/road_bike_desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="img/road_bike_tablet.jpg, img/road_bike_tablet@2x.jpg 2x">
-                <source media="(max-width: 1024px)" srcset="img/road_bike_tablet.jpg, img/road_bike_tablet@2x.jpg 2x">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="img/road_bike_mobile.webp, img/road_bike_mobile@2x.webp 2x">
+                  <source media="(max-width: 1024px)" type="image/webp"
+                    srcset="img/road_bike_tablet.webp, img/road_bike_tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/road_bike_desktop.webp, img/road_bike_desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/road_bike_tablet.jpg, img/road_bike_tablet@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" srcset="img/road_bike_tablet.jpg, img/road_bike_tablet@2x.jpg 2x">
 
-                <!-- 1х: 342px; 2x: 684px -->
-                <img src="img/road_bike_desktop.jpg" srcset="img/road_bike_desktop@2x.jpg 2x"
-                  alt="Фотография дорожного велоспеда" width="342" height="503">
-              </picture>
+                  <!-- 1х: 342px; 2x: 684px -->
+                  <img src="img/road_bike_desktop.jpg" srcset="img/road_bike_desktop@2x.jpg 2x"
+                    alt="Фотография дорожного велоспеда" width="342" height="503">
+                </picture>
               </div>
               <p class="bicycles__name">
                 Дорожный велосипед
@@ -148,21 +146,22 @@
           <li class="bicycles__item">
             <a class="bicycles__link" href="#">
               <div class="bicycles__wrap">
-              <picture>
-                <source media="(max-width: 767px)" type="image/webp"
-                  srcset="img/mountain_bike_mobile.webp, img/mountain_bike_mobile@2x.webp 2x">
-                <source media="(max-width: 1024px)" type="image/webp"
-                  srcset="img/mountain_bike_tablet.webp, img/mountain_bike_tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/mountain_bike_desktop.webp, img/mountain_bike_desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/mountain_bike_mobile.jpg, img/mountain_bike_mobile@2x.jpg 2x">
-                <source media="(max-width: 1024px)"
-                  srcset="img/mountain_bike_tablet.jpg, img/mountain_bike_tablet@2x.jpg 2x">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="img/mountain_bike_mobile.webp, img/mountain_bike_mobile@2x.webp 2x">
+                  <source media="(max-width: 1024px)" type="image/webp"
+                    srcset="img/mountain_bike_tablet.webp, img/mountain_bike_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/mountain_bike_desktop.webp, img/mountain_bike_desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)"
+                    srcset="img/mountain_bike_mobile.jpg, img/mountain_bike_mobile@2x.jpg 2x">
+                  <source media="(max-width: 1024px)"
+                    srcset="img/mountain_bike_tablet.jpg, img/mountain_bike_tablet@2x.jpg 2x">
 
-                <!-- 1х: 342px; 2x: 684px -->
-                <img src="img/mountain_bike_desktop.jpg" srcset="img/mountain_bike_desktop@2x.jpg 2x"
-                  alt="Фотография дорожного велоспеда" width="342" height="566">
-              </picture>
+                  <!-- 1х: 342px; 2x: 684px -->
+                  <img src="img/mountain_bike_desktop.jpg" srcset="img/mountain_bike_desktop@2x.jpg 2x"
+                    alt="Фотография дорожного велоспеда" width="342" height="566">
+                </picture>
               </div>
               <p class="bicycles__name">
                 Горный велосипед
@@ -172,22 +171,22 @@
           <li class="bicycles__item">
             <a class="bicycles__link" href="#">
               <div class="bicycles__wrap">
-              <picture>
-                <source media="(max-width: 767px)" type="image/webp"
-                  srcset="img/children_bicycle_mobile.webp, img/children_bicycle_mobile@2x.webp 2x">
-                <source media="(max-width: 1024px)" type="image/webp"
-                  srcset="img/children_bicycle_tablet.webp, img/children_bicycle_tablet@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/children_bicycle_desktop.webp, img/children_bicycle_desktop@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="img/children_bicycle_mobile.jpg, img/children_bicycle_mobile@2x.jpg 2x">
-                <source media="(max-width: 1024px)"
-                  srcset="img/children_bicycle_tablet.jpg, img/children_bicycle_tablet@2x.jpg 2x">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="img/children_bicycle_mobile.webp, img/children_bicycle_mobile@2x.webp 2x">
+                  <source media="(max-width: 1024px)" type="image/webp"
+                    srcset="img/children_bicycle_tablet.webp, img/children_bicycle_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/children_bicycle_desktop.webp, img/children_bicycle_desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)"
+                    srcset="img/children_bicycle_mobile.jpg, img/children_bicycle_mobile@2x.jpg 2x">
+                  <source media="(max-width: 1024px)"
+                    srcset="img/children_bicycle_tablet.jpg, img/children_bicycle_tablet@2x.jpg 2x">
 
-                <!-- 1х: 342px; 2x: 684px -->
-                <img src="img/children_bicycle_desktop.jpg" srcset="img/children_bicycle_desktop@2x.jpg 2x"
-                  alt="Фотография детского велоспеда" width="342" height="513">
-              </picture>
+                  <!-- 1х: 342px; 2x: 684px -->
+                  <img src="img/children_bicycle_desktop.jpg" srcset="img/children_bicycle_desktop@2x.jpg 2x"
+                    alt="Фотография детского велоспеда" width="342" height="513">
+                </picture>
               </div>
               <p class="bicycles__name">
                 Детский велосипед
@@ -263,7 +262,7 @@
       </li>
       <li class="footer__item">
         <a class="footer__link footer__link--tel" href="tel:+749978468446" aria-label="Телефон компании">
-          <svg width="20" height="25" aria-hidden="true">
+          <svg width="20" height="27" aria-hidden="true" stroke="#0AD9C6" stroke-width="2" fill="none">
             <use xlink:href="img/sprite_auto.svg#icon_tel"></use>
           </svg>
           +7 (499) -784-684-46

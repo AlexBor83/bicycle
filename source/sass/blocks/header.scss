@@ -30,7 +30,6 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 
@@ -46,7 +45,11 @@
 }
 
 .header__item {
-  margin: 0 20px;
+  margin: 0 55px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   @media (max-width: $desktop-width) {
     margin: 0;
@@ -120,8 +123,8 @@
   right: 10px;
   height: 1px;
   width: 25px;
-  background-color: $greydark;
-  box-shadow: 0 5px 0 0 $greydark, 0 10px 0 0 $greydark;
+  background-color: $black-opopacity-05;
+  box-shadow: 0 5px 0 0 $black-opopacity-05, 0 10px 0 0 $black-opopacity-05;
 }
 
 .header__nav--opened .header__toggle {
