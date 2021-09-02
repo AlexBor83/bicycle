@@ -21,11 +21,13 @@
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.5px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+    width: 328px;
   }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
+    width: 290px;
   }
 }
 

@@ -71,7 +71,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-top: 67px;
+    margin: 67px auto 20px auto;
+    width: 290px;
   }
 }
 
@@ -105,11 +106,11 @@
     margin: 0;
     position: absolute;
     left: 50%;
-    top: 158%;
+    top: 162%;
     transform: translateX(-50%);
   }
 
   @media (max-width: $tablet-width) {
-    top: 143%;
+    top: 146%;
   }
 }
